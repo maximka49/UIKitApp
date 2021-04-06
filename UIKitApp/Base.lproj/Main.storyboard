@@ -38,25 +38,48 @@
                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EQb-v7-QVt"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IBM-Gw-VgA">
+                                <rect key="frame" x="16" y="316" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-o1-1Nu">
+                                <rect key="frame" x="16" y="375" width="343" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Готово"/>
+                                <connections>
+                                    <action selector="mainButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNi-Wb-fdQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T8E-x8-k0h" secondAttribute="trailing" constant="16" id="9ci-Zf-bhC"/>
+                            <constraint firstItem="SNA-o1-1Nu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jas-wR-dkm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OyP-d6-DM0" secondAttribute="trailing" constant="16" id="NGP-Wo-slH"/>
                             <constraint firstItem="a4a-zh-14K" firstAttribute="top" secondItem="OyP-d6-DM0" secondAttribute="bottom" constant="70" id="XxK-Lv-uFK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBM-Gw-VgA" secondAttribute="trailing" constant="16" id="Zgz-81-dol"/>
+                            <constraint firstItem="IBM-Gw-VgA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c9e-VD-IOj"/>
+                            <constraint firstItem="SNA-o1-1Nu" firstAttribute="top" secondItem="IBM-Gw-VgA" secondAttribute="bottom" constant="25" id="cZ1-ys-tR7"/>
+                            <constraint firstItem="IBM-Gw-VgA" firstAttribute="top" secondItem="T8E-x8-k0h" secondAttribute="bottom" constant="77" id="f2e-x2-C4y"/>
                             <constraint firstItem="OyP-d6-DM0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="flA-mq-06m"/>
                             <constraint firstItem="a4a-zh-14K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n9g-8z-xoH"/>
                             <constraint firstItem="T8E-x8-k0h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oRU-RU-NsR"/>
                             <constraint firstItem="T8E-x8-k0h" firstAttribute="top" secondItem="a4a-zh-14K" secondAttribute="bottom" constant="34.5" id="ro1-C0-EeZ"/>
+                            <constraint firstItem="IBM-Gw-VgA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="swa-4A-2EA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBM-Gw-VgA" secondAttribute="trailing" constant="16" id="vo7-bv-cKp"/>
                             <constraint firstItem="OyP-d6-DM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wnH-KF-W7Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SNA-o1-1Nu" secondAttribute="trailing" constant="16" id="xMF-b5-atv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a4a-zh-14K" secondAttribute="trailing" constant="16" id="xXO-9v-DdN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mainButton" destination="SNA-o1-1Nu" id="d53-Vn-1WN"/>
                         <outlet property="mainLabel" destination="a4a-zh-14K" id="iyx-fF-lYX"/>
                         <outlet property="segmentedControl" destination="OyP-d6-DM0" id="r6O-V9-Uu0"/>
                         <outlet property="slider" destination="T8E-x8-k0h" id="SMF-H0-Jbh"/>
+                        <outlet property="textField" destination="IBM-Gw-VgA" id="aaE-KE-pdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

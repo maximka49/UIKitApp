@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var slider: UISlider!
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var mainButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,13 @@ class ViewController: UIViewController {
         slider.thumbTintColor = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
         
         mainLabel.text = String(slider.value)
+        
+        // MARK: TextField
+        textField.backgroundColor = .white
+        // MARK: Button
+        
+        mainButton.layer.cornerRadius = 10
+        
     }
 
 
@@ -52,7 +61,11 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func sliderAction(_ sender: Any) {
-        
+        mainLabel.text = String(Int(slider.value))
+    }
+    @IBAction func mainButtonAction(_ sender: Any) {
+        guard let text = textField.text, !text.isEmpty else { return }
+        mainLabel.text = text
     }
 }
 
